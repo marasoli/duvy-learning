@@ -1,24 +1,16 @@
 {
   "name": "duvy-api",
-  "version": "1.0.0",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "node --env-file=server/.env --experimental-strip-types --watch server/server.ts",
     "start": "node --env-file=server/.env --experimental-strip-types --no-warnings server/server.ts",
     "db:seed": "node --env-file=server/.env --experimental-strip-types --no-warnings server/db/seed.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/marasoli/duvy-learning.git"
-  },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.2",
     "@types/node": "^24.10.0",
     "drizzle-kit": "^0.31.6",
     "drizzle-seed": "^0.3.1",
-    "typescript": "^5.9.3",
-    "ultracite": "^6.2.0"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@fastify/cors": "^11.1.0",
