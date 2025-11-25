@@ -35,18 +35,19 @@ npm install
 
 3. Entre na pasta back: `cd back`
 
-4. Inicie o banco de dados com o Docker
-```bash
-docker compose up -d
-```
-
-5. Instale as dependências
+4. Instale as dependências
 ```bash
 npm install
+```
+5. Inicie o banco de dados com o Docker
+```bash
+cd docker
+docker compose up -d
 ```
 
 6. Execute as migrações do banco
 ```bash
+cd server
 npx drizzle-kit migrate
 ```
 
@@ -103,4 +104,3 @@ npm run dev
 **Backend API -** `http://localhost:3333`
 - `GET /health` - Health check da aplicação
 - `GET /rooms` - Lista as salas disponíveis
-

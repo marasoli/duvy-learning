@@ -8,6 +8,13 @@
       "when": 1762291293815,
       "tag": "0000_chunky_bastion",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1764088299551,
+      "tag": "0001_new_mad_thinker",
+      "breakpoints": true
     }
   ]
 }
