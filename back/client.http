@@ -11,7 +11,7 @@ GET {{baseUrl}}/rooms
 
 ###
 
-# @name createRoom
+# @name createRooms
 POST {{baseUrl}}/rooms
 Content-Type: application/json
 
@@ -21,11 +21,11 @@ Content-Type: application/json
 
 ###
 
-@roomId = {{createRoom.response.body.$.roomId}}
+@roomId = {{createRooms.response.body.$.roomId}}
 
 ###
 
-# @name getRoomQuestions
+# @name getQuestions
 GET {{baseUrl}}/rooms/{{roomId}}/questions
 
 ###
@@ -35,5 +35,5 @@ POST {{baseUrl}}/rooms/{{roomId}}/questions
 Content-Type: application/json
 
 {
-  "question": "Qual o valor de X e Y?"
+  "question": "O que é o React?"
 }

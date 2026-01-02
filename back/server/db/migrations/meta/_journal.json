@@ -15,6 +15,13 @@
       "when": 1764088299551,
       "tag": "0001_new_mad_thinker",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1765210758639,
+      "tag": "0002_superb_the_professor",
+      "breakpoints": true
     }
   ]
 }
