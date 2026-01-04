@@ -1,7 +1,7 @@
 import type { FastifyPluginCallbackZod } from 'fastify-type-provider-zod'
 import { z } from 'zod/v4'
 import { db } from '../db/connection.ts'
-import { schema } from '../db/schema/index.ts'
+import { schema } from '../db/schema/index-schema.ts'
 import { generateEmbeddings, transcribeAudio } from '../services/gemini.ts'
 
 export const uploadAudioRoute: FastifyPluginCallbackZod = (app) => {
@@ -19,7 +19,7 @@ export const uploadAudioRoute: FastifyPluginCallbackZod = (app) => {
       const audio = await request.file()
 
       if (!audio) {
-        throw new Error('Audio is required.')
+        throw new Error('É necessário um áudio.')
       }
 
       const audioBuffer = await audio.toBuffer()

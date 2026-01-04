@@ -1,7 +1,7 @@
 import type { FastifyPluginCallbackZod } from 'fastify-type-provider-zod'
 import { z } from 'zod/v4'
 import { db } from '../db/connection.ts'
-import { schema } from '../db/schema/index.ts'
+import { schema } from '../db/schema/index-schema.ts'
 
 export const createRoomRoute: FastifyPluginCallbackZod = (app) => {
   app.post(
@@ -28,7 +28,7 @@ export const createRoomRoute: FastifyPluginCallbackZod = (app) => {
       const insertedRoom = result[0]
 
       if (!insertedRoom) {
-        throw new Error('Failed to create new room.')
+        throw new Error('Falha ao criar nova sala.')
       }
 
       return reply.status(201).send({ roomId: insertedRoom.id })
