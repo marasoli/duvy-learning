@@ -1,8 +1,10 @@
 services:
   duvy-pg:
     image: pgvector/pgvector:pg17
-    env_file:
-      - ./.env
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: duvydb
     ports:
       - "5432:5432"
     volumes:

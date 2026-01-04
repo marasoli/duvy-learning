@@ -2,9 +2,9 @@
   "name": "duvy-api",
   "type": "module",
   "scripts": {
-    "dev": "node --env-file=server/.env --experimental-strip-types --watch server/server.ts",
-    "start": "node --env-file=server/.env --experimental-strip-types server/server.ts",
-    "db:seed": "node --env-file=server/.env --experimental-strip-types server/db/seed.ts"
+    "dev": "node --env-file .env --experimental-strip-types --watch server/server.ts",
+    "start": "node --env-file .env --experimental-strip-types server/server.ts",
+    "db:seed": "node --env-file .env --experimental-strip-types server/db/seed.ts"
   },
   "devDependencies": {
     "@types/node": "^24.10.0",

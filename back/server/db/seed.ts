@@ -4,10 +4,10 @@ import { schema } from './schema/index.ts'
 
 await reset(db, schema)
 
-await seed(db, schema).refine(f => ({  
+await seed(db, schema).refine((f) => ({
   rooms: {
     count: 5,
-    coluns: {
+    columns: {
       name: f.companyName(),
       description: f.loremIpsum(),
     },
