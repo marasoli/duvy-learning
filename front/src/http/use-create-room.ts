@@ -9,9 +9,7 @@ export function useCreateRoom() {
     mutationFn: async (data: CreateRoomRequest) => {
       const response = await fetch('http://localhost:3333/rooms', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       })
 

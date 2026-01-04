@@ -18,6 +18,10 @@ export function useCreateQuestion(roomId: string) {
       const result: CreateQuestionResponse = await response.json()
       console.log("Resposta Server:", result)
 
+      if (result.answer === null) {
+        result.answer = "Desculpe, não possuo informações no conteúdo da aula para responde à pergunta."
+      }
+
       return result
     },
 
